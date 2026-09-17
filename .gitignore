@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+Server/data/
+*.sqlite
+*.sqlite-*
+.DS_Store

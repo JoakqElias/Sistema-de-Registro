@@ -1,0 +1,432 @@
+:root {
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#202720;
+  background:#f5f6f2;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  font-weight:400;
+}
+
+.pagina-auth {
+  max-width: 510px;
+  padding-top: 65px;
+}
+.pagina-auth > p:not(.sobretitulo) {
+  color: #606a60;
+  margin-bottom: 26px;
+}
+.enlace-auth {
+  border: 0;
+  background: transparent;
+  color: #284d36;
+  text-decoration: underline;
+  font-size: 13px;
+  padding: 8px;
+}
+.usuario-cabecera {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+.usuario-cabecera .etiqueta-cabecera {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  min-width:320px;
+}
+
+button,input,textarea {
+  font:inherit;
+}
+
+button {
+  cursor:pointer;
+}
+
+button,input,textarea {
+  transition:border-color .15s,box-shadow .15s;
+}
+
+button:focus-visible,input:focus-visible,textarea:focus-visible {
+  outline:3px solid #8ab5a0;
+  outline-offset:3px;
+}
+
+.cabecera {
+  height:84px;
+  padding:0 max(24px,calc((100vw - 1120px)/2));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#fff;
+  border-bottom:1px solid #e3e7df;
+  gap:20px;
+}
+
+.marca {
+  font-size:25px;
+  font-weight:850;
+  letter-spacing:-1px;
+}
+
+.marca span {
+  color:#55765c;
+}
+
+.etiqueta-cabecera {
+  font-size:13px;
+  color:#5f685f;
+}
+
+main {
+  max-width:1120px;
+  margin:0 auto;
+  padding:48px 24px 36px;
+}
+
+.encabezado-pagina {
+  margin-bottom:34px;
+}
+
+.sobretitulo {
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:2px;
+  color:#506a53;
+}
+
+h1 {
+  font-size:clamp(28px,4vw,40px);
+  font-weight:650;
+  letter-spacing:-1.4px;
+  margin:10px 0 12px;
+}
+
+.encabezado-pagina>p:last-child {
+  color:#606a60;
+  font-size:15px;
+}
+
+.distribucion-productos {
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+  gap:36px;
+  align-items:start;
+}
+
+.formulario-producto {
+  padding:28px;
+  background:white;
+  border:1px solid #e1e6dc;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.titulo-seccion {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:6px;
+}
+
+.numero-seccion {
+  font-size:12px;
+  color:#50694e;
+  border:1px solid #d6dfd1;
+  background:#f6f8f2;
+  border-radius:50%;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+}
+
+h2 {
+  font-size:17px;
+  margin:0;
+  font-weight:650;
+}
+
+.titulo-seccion p {
+  font-size:12px;
+  color:#636e62;
+  margin:5px 0 0;
+}
+
+label {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:13px;
+  font-weight:600;
+  min-width:0;
+}
+
+input,textarea {
+  width:100%;
+  border:1px solid #d8dfd4;
+  background:#fff;
+  border-radius:8px;
+  padding:12px;
+  color:#252d25;
+  font-size:14px;
+  font-weight:400;
+}
+
+input::placeholder,textarea::placeholder {
+  color:#747b72;
+}
+
+textarea {
+  resize:vertical;
+  min-height:95px;
+}
+
+.campos-dobles {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.ayuda {
+  font-size:12px;
+  color:#626c60;
+  margin:-12px 0 0;
+}
+
+.acciones-formulario {
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  padding-top:18px;
+  border-top:1px solid #edf0e9;
+}
+
+.acciones-formulario button {
+  padding:12px 17px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.boton-principal {
+  background:#284d36;
+  color:white;
+  border:1px solid #284d36;
+}
+
+.boton-principal:hover {
+  background:#1a3925;
+}
+
+.boton-principal span {
+  margin-left:18px;
+}
+
+.boton-secundario {
+  background:white;
+  border:1px solid #d8dfd4;
+  color:#414d3e;
+}
+
+.boton-secundario:hover {
+  background:#f1f4ed;
+}
+
+.panel-preview {
+  padding-top:10px;
+  min-width:0;
+}
+
+.panel-preview>.titulo-seccion {
+  margin-bottom:24px;
+}
+
+.tarjeta-producto {
+  border:1px solid #dfe4d8;
+  border-radius:16px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 8px 25px #25351e08;
+}
+
+.imagen-producto {
+  height:260px;
+  background:#e9ede3;
+  position:relative;
+}
+
+.imagen-producto img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.imagen-vacia {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#65745c;
+}
+
+.imagen-vacia>span {
+  font-size:76px;
+  font-weight:300;
+  line-height:1;
+}
+
+.imagen-vacia p {
+  font-size:12px;
+}
+
+.estado-stock {
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:#fff;
+  color:#285238;
+  border-radius:30px;
+  padding:7px 12px;
+  font-size:11px;
+  font-weight:650;
+}
+
+.estado-stock.sin-stock {
+  color:#63573f;
+}
+
+.contenido-tarjeta {
+  padding:25px;
+  overflow-wrap:anywhere;
+}
+
+.codigo-producto {
+  color:#67765f;
+  font-size:11px;
+  letter-spacing:1px;
+  margin:0 0 9px;
+}
+
+.contenido-tarjeta h3 {
+  font-size:24px;
+  letter-spacing:-.5px;
+  margin:0 0 12px;
+}
+
+.descripcion-producto {
+  color:#636d60;
+  font-size:14px;
+  line-height:1.6;
+  white-space:pre-wrap;
+}
+
+.detalles-producto {
+  display:flex;
+  gap:35px;
+  margin:22px 0;
+}
+
+.detalles-producto dt {
+  color:#6a7265;
+  font-size:11px;
+  margin-bottom:5px;
+}
+
+.detalles-producto dd {
+  margin:0;
+  font-size:13px;
+  font-weight:600;
+}
+
+.precio-producto {
+  font-size:28px;
+  letter-spacing:-.6px;
+  margin:0;
+  padding-top:18px;
+  border-top:1px solid #ebeee7;
+  font-weight:650;
+}
+
+.nota-preview {
+  font-size:12px;
+  line-height:1.6;
+  color:#687360;
+  margin:18px 8px;
+}
+
+.error-formulario {
+  color:#982e24;
+  font-size:13px;
+  margin:0;
+}
+
+.mensaje-exito {
+  background:#e7f2e8;
+  border:1px solid #c4ddc7;
+  border-radius:8px;
+  padding:15px;
+  color:#214d2f;
+  font-size:14px;
+}
+
+@media(max-width:760px) {
+  .distribucion-productos {
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .cabecera {
+    height:70px;
+  }
+  .etiqueta-cabecera {
+    font-size:11px;
+  }
+  main {
+    padding-top:30px;
+  }
+  .formulario-producto {
+    padding:20px;
+  }
+  .panel-preview {
+    max-width:460px;
+    width:100%;
+    justify-self:center;
+  }
+  .imagen-producto {
+    height:240px;
+  }
+}
+
+@media(max-width:380px) {
+  .campos-dobles {
+    grid-template-columns:1fr;
+  }
+  .acciones-formulario {
+    flex-wrap:wrap;
+  }
+  .cabecera {
+    padding:0 16px;
+  }
+  main {
+    padding-left:16px;
+    padding-right:16px;
+  }
+}
